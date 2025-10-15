@@ -20,7 +20,8 @@ const navData = [
         className: "cat",
         items: [
             {label: "Interests", href: "/pages/aboutme/p/interests.html", className: "nbiitem"},
-            {label: "My links", href: "/pages/aboutme/p/mylinks.html", className: "nbiitem"}
+            {label: "My links", href: "/pages/aboutme/p/mylinks.html", className: "nbiitem"},
+            {label: "Travel Portfolio", href: "/pages/travel-portfolio/index.html", className: "nbiitem"}
         ]
     },
     {
@@ -118,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLabel = findCurrentLabel(navData, currentPage);
 
     const headercode = `
-<<<<<<< HEAD
         <h1 class="header-title">${currentLabel} | ColinZeDev</h1>
         <div class="marquee-container">
             <div class="marquee-text" id="marquee">
@@ -128,17 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <nav>
             ${buildNav(navData)}
         </nav>
-=======
-<h1 class="header-title">${currentLabel} | ColinZeDev</h1>
-<div class="marquee-container">
-    <div class="marquee-text" id="marquee">
-        ${pickRandomMessage()}
-    </div>
-</div>
-<nav>
-    ${buildNav(navData)}
-</nav>
->>>>>>> 1391dbd (update some shit)
     `;
     document.getElementById('header.insert').innerHTML = headercode;
     document.getElementById('header.insert').removeAttribute('id');
