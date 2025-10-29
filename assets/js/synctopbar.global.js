@@ -11,7 +11,7 @@ async function getip() {
 const navData = [
     {
         label: "Home",
-        href: "/index.html",
+        href: "/",
         className: "cat"
     },
     {
