@@ -56,6 +56,18 @@ ul li {
 .scale-on-hover:hover {
     transform: scale(15.5);
 }
+.scale-on-hover2 {
+    transition: transform 0.3s ease-in-out 0.2s;
+}
+.scale-on-hover2:hover {
+    transform: scale(5) translate(3rem, 2rem);;
+}
+.scale-on-hover3 {
+    transition: transform 0.3s ease-in-out 0.2s;
+}
+.scale-on-hover3:hover {
+    transform: scale(5) translate(3rem, -12px);;
+}
 
 .loutr {
     list-style-type: disc;
