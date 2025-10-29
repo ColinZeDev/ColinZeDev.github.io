@@ -16,26 +16,26 @@ const navData = [
     },
     {
         label: "About Me",
-        href: "/pages/aboutme/index.html",
+        href: "/pages/aboutme/",
         className: "cat",
         items: [
-            {label: "Interests", href: "/pages/aboutme/p/interests.html", className: "nbiitem"},
-            {label: "My links", href: "/pages/aboutme/p/mylinks.html", className: "nbiitem"},
-            {label: "Travel Portfolio", href: "/pages/travel-portfolio/index.html", className: "nbiitem"}
+            {label: "Interests", href: "/pages/aboutme/p/interests", className: "nbiitem"},
+            {label: "My links", href: "/pages/aboutme/p/mylinks", className: "nbiitem"},
+            {label: "Travel Portfolio", href: "/pages/travel-portfolio/", className: "nbiitem"}
         ]
     },
     {
         label: "Projects",
-        href: "/pages/projects/index.html",
+        href: "/pages/projects/",
         className: "cat",
         items: [
-            {label: "Python", href: "/pages/projects/python/index.html", className: "nbiitem"},
-            {label: "HTML", href: "/pages/projects/html/index.html", className: "nbiitem"}
+            {label: "Python", href: "/pages/projects/python/", className: "nbiitem"},
+            {label: "HTML", href: "/pages/projects/html/", className: "nbiitem"}
         ]
     },
     {
         label: "Guides",
-        href: "/pages/guides/index.html",
+        href: "/pages/guides/",
         className: "cat"
     }
 ];
