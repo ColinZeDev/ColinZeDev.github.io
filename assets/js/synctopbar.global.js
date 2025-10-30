@@ -38,7 +38,8 @@ const navData = [
         href: "#",
         className: "cat",
         items: [
-            {label: "Guides", href: "https://guides.cybercolin.org/", className: "nbiitem"}
+            {label: "Guides", href: "https://guides.cybercolin.org/", className: "nbiitem"},
+            {label: "Blog", href: "https://blog.cybercolin.org/", className: "nbiitem"}
         ]
     }
 ];
