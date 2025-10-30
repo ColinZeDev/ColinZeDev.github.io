@@ -54,7 +54,7 @@ let marqueeMessages = [
     "Welcome to my website!",
     "HTML is a pain in the ass to use",
     "I use arch btw",
-    "SGFoYSB3YXN0ZWQgdXIgdGltZQ==", // "Haha wasted ur time" in base64
+    "SGFoYSB3YXN0ZWQgdXIgdGltZQ==", // "Haha wasted ur time" in base64 encoding
     "That freakin' snipers a spy!"
 ];
 
