@@ -1,4 +1,5 @@
-deploy.bat
+*.bat
 assets/pagetemplate
 _other
-_other/professional.html
+pages/guides
+pages/travel-portfolio
