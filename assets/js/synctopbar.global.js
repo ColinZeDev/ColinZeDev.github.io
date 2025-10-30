@@ -8,6 +8,20 @@ async function getip() {
     }
 }
 
+const ascii = `
+  /$$$$$$            /$$                            /$$$$$$            /$$ /$$
+ /$$__  $$          | $$                           /$$__  $$          | $$|__/
+| $$  \\__/ /$$   /$$| $$$$$$$   /$$$$$$   /$$$$$$ | $$  \\__/  /$$$$$$ | $$ /$$ /$$$$$$$
+| $$      | $$  | $$| $$__  $$ /$$__  $$ /$$__  $$| $$       /$$__  $$| $$| $$| $$__  $$
+| $$      | $$  | $$| $$  \\ $$| $$$$$$$$| $$  \\__/| $$      | $$  \\ $$| $$| $$| $$  \\ $$
+| $$    $$| $$  | $$| $$  | $$| $$_____/| $$      | $$    $$| $$  | $$| $$| $$| $$  | $$
+|  $$$$$$/|  $$$$$$$| $$$$$$$/|  $$$$$$$| $$      |  $$$$$$/|  $$$$$$/| $$| $$| $$  | $$
+ \\______/  \\____  $$|_______/  \\_______/|__/       \\______/  \\______/ |__/|__/|__/  |__/
+           /$$  | $$
+          |  $$$$$$/
+           \\______/
+`;
+
 const navData = [
     {
         label: "Home",
@@ -20,8 +34,7 @@ const navData = [
         className: "cat",
         items: [
             {label: "Interests", href: "/pages/aboutme/p/interests", className: "nbiitem"},
-            {label: "My links", href: "/pages/aboutme/p/mylinks", className: "nbiitem"},
-            {label: "Travel Portfolio", href: "/pages/travel-portfolio/", className: "nbiitem"}
+            {label: "My links", href: "/pages/aboutme/p/mylinks", className: "nbiitem"}
         ]
     },
     {
@@ -39,7 +52,8 @@ const navData = [
         className: "cat",
         items: [
             {label: "Guides", href: "https://guides.cybercolin.org/", className: "nbiitem"},
-            {label: "Blog", href: "https://blog.cybercolin.org/", className: "nbiitem"}
+            {label: "Blog", href: "https://blog.cybercolin.org/", className: "nbiitem"},
+            {label: "Apps", href: "https://apps.cybercolin.org/", className: "nbiitem"}
         ]
     }
 ];
@@ -55,7 +69,9 @@ let marqueeMessages = [
     "HTML is a pain in the ass to use",
     "I use arch btw",
     "SGFoYSB3YXN0ZWQgdXIgdGltZQ==", // "Haha wasted ur time" in base64 encoding
-    "That freakin' snipers a spy!"
+    "That freakin' snipers a spy!",
+    "33.5 x 2 = ?",
+    "00110110 00110111"
 ];
 
 function getCurrentPage() {
@@ -123,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLabel = findCurrentLabel(navData, currentPage);
 
     const headercode = `
-        <h1 class="header-title">${currentLabel} | ColinZeDev</h1>
+        <h1 class="header-title">${currentLabel} | <a class="nav-title-a" href="https://cybercolin.org/">cybercolin.org</a></h1>
         <div class="marquee-container">
             <div class="marquee-text" id="marquee">
                 ${pickRandomMessage()}
@@ -136,6 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('header.insert').innerHTML = headercode;
     document.getElementById('header.insert').removeAttribute('id');
     console.log('<header> sync complete!');
+    console.log(ascii);
+    console.log("+=--------------------------------------=+")
+    console.log("Why are you here?");
+    console.log("Get out of the console you snoopy little guy/gal/human");
     const marqueeDiv = document.getElementById("marquee");
     marqueeDiv.addEventListener("animationiteration", () => {
         marqueeDiv.textContent = pickRandomMessage();

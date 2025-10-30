@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Playpen Sans';
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
 
@@ -13,7 +13,6 @@ ul li {
 .a {
     color: #bd2d2d;
     text-decoration: none;
-
 }
 .a:hover {
     color: #75c728;
@@ -56,17 +55,19 @@ ul li {
 .scale-on-hover:hover {
     transform: scale(15.5);
 }
+
 .scale-on-hover2 {
     transition: transform 0.3s ease-in-out 0.2s;
 }
 .scale-on-hover2:hover {
-    transform: scale(5) translate(3rem, 2rem);;
+    transform: scale(5) translate(3rem, 2rem);
 }
+
 .scale-on-hover3 {
     transition: transform 0.3s ease-in-out 0.2s;
 }
 .scale-on-hover3:hover {
-    transform: scale(5) translate(3rem, -12px);;
+    transform: scale(5) translate(3rem, -12px);
 }
 
 .loutr {
@@ -78,4 +79,55 @@ ul li {
     list-style-type: circle;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
+}
+
+.loutr li, .linnr li {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.loutr li:nth-child(1) { animation-delay: 0.1s; }
+.loutr li:nth-child(2) { animation-delay: 0.25s; }
+.loutr li:nth-child(3) { animation-delay: 0.4s; }
+.loutr li:nth-child(4) { animation-delay: 0.55s; }
+.loutr li:nth-child(5) { animation-delay: 0.7s; }
+
+.linnr li:nth-child(1) { animation-delay: 0.2s; }
+.linnr li:nth-child(2) { animation-delay: 0.35s; }
+.linnr li:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#loutr li, #linnr li, #linner li {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+#loutr li:nth-child(1) { animation-delay: 0.1s; }
+#loutr li:nth-child(2) { animation-delay: 0.25s; }
+#loutr li:nth-child(3) { animation-delay: 0.4s; }
+#loutr li:nth-child(4) { animation-delay: 0.55s; }
+#loutr li:nth-child(5) { animation-delay: 0.7s; }
+
+#linnr li:nth-child(1) { animation-delay: 0.2s; }
+#linnr li:nth-child(2) { animation-delay: 0.35s; }
+#linnr li:nth-child(3) { animation-delay: 0.5s; }
+
+#linner li:nth-child(1) { animation-delay: 0.2s; }
+#linner li:nth-child(2) { animation-delay: 0.35s; }
+#linner li:nth-child(3) { animation-delay: 0.5s; }
+#linner li:nth-child(4) { animation-delay: 0.65s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

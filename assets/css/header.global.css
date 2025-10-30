@@ -1,18 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+
+:root {
+    --orange: rgb(235, 119, 24);
+    /* nav */
+    --primary: rgb(45, 19, 5);
+    --currentcat: rgb(177, 98, 49);
+    --currentcathover: rgb(200, 118, 68);
+    --currentcatparent: rgb(244, 153, 96);
+    --currentcatparenthover: rgb(238, 167, 122);
+}
+
 header {
-    background: rgb(0,0,0);
-    box-shadow: rgb(50,50,50);
+    background: var(--primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: white;
     display: flex;
     align-items: center;
-    height: 23px;
-    font-family: 'Roboto Mono';
+    font-family: 'Ubuntu Mono';
     z-index: 100;
     position: fixed;
-    top: 0px;
+    top: 0;
     width: calc(100% - 40px);
     padding: 10px 20px;
     margin-bottom: 2px;
 }
+
 header h1 {
     margin: 0;
     font-size: 1.2rem;
@@ -20,23 +32,24 @@ header h1 {
 }
 
 nav {
-    padding: 0;
-    margin: 0;
-    user-select: none;
     margin-left: auto;
+    user-select: none;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    background: rgb(0,0,0);
+    background: var(--primary);
     z-index: 5;
     padding: 0;
     margin: 0;
 }
+
 nav li {
     margin-right: 6px;
+    position: relative;
 }
+
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
@@ -44,45 +57,82 @@ nav ul li a {
     display: block;
     margin-left: 50px;
     font-size: 20px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
+
 nav ul li a.curcat {
-    color: rgb(200, 170, 0);
+    color: var(--currentcat);
 }
+
 nav ul li a.curcat:hover {
-    color: rgb(255,215,0);
+    color: var(--currentcathover);
 }
 
 nav ul li a.curparent {
-    color: rgb(255, 215, 100);
+    color: var(--currentcatparent);
 }
+
 nav ul li a.curparent:hover {
-    color: rgb(255, 235, 150);
+    color: var(--currentcatparenthover);
 }
+
 nav a:hover {
     color: #ffffff;
-    text-shadow: #cababa;
+    text-shadow: 0 0 5px #cababa;
 }
+
+header ul li ul {
+    width: 220px;
+    background: var(--primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    padding: 5px 0;
+}
+
 header ul li ul li {
     display: block;
 }
-header ul li ul {
-    width: 200px;
-    background: #000000;
-    position: absolute;
-    z-index: 4;
-    display: none;
+
+header ul li ul li a {
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 18px;
+    color: rgb(200, 200, 200);
+    background: transparent;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    border-radius: 0;
+}
+
+header ul li ul li a:hover {
+    background: var(--orange);
+    color: #fff;
+    transform: translateX(3px);
 }
 
 header ul li:hover ul {
-    display: block;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-.nbitem {
+.nbitem, .nbitemNA {
     scrollbar-width: none;
 }
+
 .nbitemNA {
-    scrollbar-width: none;
-    color: rgb(100, 0, 0)
+    color: rgb(100, 0, 0);
 }
 
 .marquee-container {
@@ -103,4 +153,15 @@ header ul li:hover ul {
 @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
+}
+
+.nav-title-a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-title-a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--orange);
 }
