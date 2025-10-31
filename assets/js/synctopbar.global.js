@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(ascii);
     console.log("+=--------------------------------------=+")
     console.log("Why are you here?");
-    console.log("Get out of the console you snoopy little guy/gal/human");
+    console.log("Get out of the console you snoopy little guy/gal/human/being/organism");
     const marqueeDiv = document.getElementById("marquee");
     marqueeDiv.addEventListener("animationiteration", () => {
         marqueeDiv.textContent = pickRandomMessage();

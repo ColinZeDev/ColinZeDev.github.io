@@ -11,7 +11,7 @@
         <script src="/assets/js/synctopbar.global.js" type="text/javascript"></script>
         <script src="https://cdn.cybercolin.org/js/getage.js" type="text/javascript"></script>
         <style>#dmiby{cursor:help;}#dmiby:hover{text-decoration:underline;}</style>
-        <script type="text/javascript">function about_demiboy() {alert("About demiboy:\n\nA demiboy is a non-binary gender identity for someone who partially, but not fully, identifies as a man or boy. The prefix \"demi-\" means \"half,\" reflecting this partial connection to the male gender, though it's understood as a spectrum rather than a literal 50%. Demiboys may or may not identify with another gender, such as non-binary, and their experience is unique to each individual.");}</script>
+        <script type="text/javascript" src="/assets/js/funcs.global.js"></script>
     </head>
     <body>
         <header id="header.insert"></header>
@@ -26,7 +26,7 @@
                 </ul>
             </li>
             <li>
-                I'm Gay/Graysexual/Demiromantic
+                I'm <b onclick="about_gay()" id="dmiby">Gay</b>/<b onclick="about_graysexual()" id="dmiby">Graysexual</b>/<b onclick="about_demiromantic()" id="dmiby">Demiromantic</b>
                 <ul id="linnr">
                     <li>
                         the flags (in same order as above):
@@ -37,7 +37,7 @@
                 </ul>
             </li>
             <li>Age: <span id="age-li"></span></li>
-            <li>My favorite color is <b style="color:#e27d09;">Orange</b></li>
+            <li>My favorite color is <i><b style="color:#e27d09;background-color:#ffffff;">Orange</b></i></li>
         </ul>
     </body>
 </html>
