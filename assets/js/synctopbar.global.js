@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLabel = findCurrentLabel(navData, currentPage);
 
     const headercode = `
-        <h1 class="header-title">${currentLabel} | <a class="nav-title-a" href="https://cybercolin.org/">cybercolin.org</a></h1>
+        <h1 class="header-title">${currentLabel} | <a class="nav-title-a" href="https://cybercolin.org/">CyberColin</a></h1>
         <div class="marquee-container">
             <div class="marquee-text" id="marquee">
                 ${pickRandomMessage()}
